@@ -56,14 +56,53 @@ const People = () => {
                           {student.metadata.name}
                         </h3>
                         <p className="text-gray-600 mb-3">{student.metadata.research}</p>
-                        {student.metadata.email && (
-                          <a
-                            href={`mailto:${student.metadata.email}`}
-                            className="text-gray-900 hover:underline text-sm"
-                          >
-                            {student.metadata.email}
-                          </a>
+
+                        {student.content && (
+                          <div className="prose prose-sm text-gray-600 mb-3 max-w-none">
+                            <MarkdownRenderer content={student.content} />
+                          </div>
                         )}
+
+                        <div className="flex flex-wrap gap-3 text-sm">
+                          {student.metadata.email && (
+                            <a
+                              href={`mailto:${student.metadata.email}`}
+                              className="text-gray-900 hover:underline"
+                            >
+                              Email
+                            </a>
+                          )}
+                          {student.metadata.website && (
+                            <a
+                              href={student.metadata.website}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-gray-900 hover:underline"
+                            >
+                              Website
+                            </a>
+                          )}
+                          {student.metadata.github && (
+                            <a
+                              href={student.metadata.github}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-gray-900 hover:underline"
+                            >
+                              GitHub
+                            </a>
+                          )}
+                          {student.metadata.linkedin && (
+                            <a
+                              href={student.metadata.linkedin}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-gray-900 hover:underline"
+                            >
+                              LinkedIn
+                            </a>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
