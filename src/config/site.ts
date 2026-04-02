@@ -4,8 +4,8 @@
 
 export const siteConfig = {
   // Lab name and tagline
-  labName: "NeSS",
-  labTagline: "Neurosymbolic Software Systems Lab",
+  labName: "NeSE",
+  labTagline: "Neurosymbolic Software Engineering Lab",
 
   // Principal Investigator
   pi: {
@@ -34,8 +34,8 @@ export const siteConfig = {
 
   // Homepage hero section
   hero: {
-    title: "NeSS",
-    subtitle: "Neurosymbolic Software Systems Lab",
+    title: "NeSE",
+    subtitle: "Neurosymbolic Software Engineering Lab",
   },
 
   // Research highlights (3-4 main areas)
