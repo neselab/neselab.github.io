@@ -2,6 +2,7 @@
 name: Bethel Hall
 research: Neuro-symbolic AI & LLM Reliability
 email: bhall4@stevens.edu
+photo: "https://bethelhall.tech/images/beth.jpg"
 website: https://bethelhall.me
 github: https://github.com/bethelhall
 linkedin: https://linkedin.com/in/bethelhall

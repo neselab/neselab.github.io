@@ -16,21 +16,44 @@ const People = () => {
           <section className="mb-20">
             <h2 className="text-2xl font-light text-gray-900 mb-8">Principal Investigator</h2>
             <div className="border-l-2 border-gray-200 pl-8">
-              <h3 className="text-xl font-medium text-gray-900 mb-2">{siteConfig.pi.name}</h3>
-              <p className="text-gray-600 mb-1">{siteConfig.pi.title}</p>
-              <p className="text-gray-600 mb-1">{siteConfig.pi.department}</p>
-              <p className="text-gray-600 mb-4">{siteConfig.pi.university}</p>
-              <a
-                href={`mailto:${siteConfig.pi.email}`}
-                className="text-gray-900 hover:underline"
-              >
-                {siteConfig.pi.email}
-              </a>
-              {piData.length > 0 && (
-                <div className="mt-6 prose prose-gray max-w-none">
-                  <MarkdownRenderer content={piData[0].content} />
+              <div className="flex gap-6 items-start">
+                {siteConfig.pi.photo && (
+                  <img
+                    src={siteConfig.pi.photo}
+                    alt={siteConfig.pi.name}
+                    className="w-24 h-24 rounded object-cover flex-shrink-0"
+                  />
+                )}
+                <div className="flex-1">
+                  <h3 className="text-xl font-medium text-gray-900 mb-2">{siteConfig.pi.name}</h3>
+                  <p className="text-gray-600 mb-1">{siteConfig.pi.title}</p>
+                  <p className="text-gray-600 mb-1">{siteConfig.pi.department}</p>
+                  <p className="text-gray-600 mb-4">{siteConfig.pi.university}</p>
+                  <div className="flex flex-wrap gap-3 text-sm mb-4">
+                    <a
+                      href={`mailto:${siteConfig.pi.email}`}
+                      className="text-gray-900 hover:underline"
+                    >
+                      Email
+                    </a>
+                    {siteConfig.pi.website && (
+                      <a
+                        href={siteConfig.pi.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-900 hover:underline"
+                      >
+                        Website
+                      </a>
+                    )}
+                  </div>
+                  {piData.length > 0 && (
+                    <div className="prose prose-gray max-w-none">
+                      <MarkdownRenderer content={piData[0].content} />
+                    </div>
+                  )}
                 </div>
-              )}
+              </div>
             </div>
           </section>
 
