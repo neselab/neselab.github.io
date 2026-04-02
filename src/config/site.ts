@@ -4,8 +4,8 @@
 
 export const siteConfig = {
   // Lab name and tagline
-  labName: "SAFER",
-  labTagline: "SAFER: The Lab for Symbolic AI, Federated Learning, Explainability, and Robustness",
+  labName: "NeSS",
+  labTagline: "Neurosymbolic Software Systems Lab",
 
   // Principal Investigator
   pi: {
@@ -19,6 +19,7 @@ export const siteConfig = {
 
   // Contact information
   contact: {
+    email: "weiers@stevens.edu",
     address: "Gateway North, GN-404\nStevens Institute of Technology\nHoboken, NJ 07030",
   },
 
@@ -32,8 +33,8 @@ export const siteConfig = {
 
   // Homepage hero section
   hero: {
-    title: "SAFER",
-    subtitle: "The Lab for Symbolic AI, Federated Learning, Explainability, and Robustness",
+    title: "NeSS",
+    subtitle: "Neurosymbolic Software Systems Lab",
   },
 
   // Research highlights (3-4 main areas)
