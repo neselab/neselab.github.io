@@ -15,6 +15,7 @@ export const siteConfig = {
     university: "Stevens Institute of Technology",
     email: "weiers@stevens.edu",
     website: "https://william-eiers.github.io",
+    photo: "https://www.stevens.edu/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fmviowpldu823%2F7lmpEyYIYoSuTcmPV0dqmC%2F7986532d4820027916a4d4a581e0ae2f%2Fweiers.jpg%3Fw%3D400%26h%3D400%26f%3Dcenter%26q%3D80%26fit%3Dfill&w=1024&q=80",
   },
 
   // Contact information
