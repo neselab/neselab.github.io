@@ -7,29 +7,33 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section - Clean and Minimal */}
-      <section className="pt-32 pb-24 px-6">
+      <section className="pt-32 pb-24 px-6 bg-gradient-to-b from-blue-50/40 via-white to-white">
         <div className="container mx-auto max-w-5xl">
-          <div className="space-y-6">
-            <h1 className="text-5xl md:text-6xl font-light text-gray-900 tracking-tight">
-              {siteConfig.hero.title}
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-600 font-light max-w-3xl leading-relaxed">
-              {siteConfig.hero.subtitle}
-            </p>
-            <div className="pt-2">
-              <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-blue-400"></div>
+          <div className="space-y-8">
+            <div>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-gray-900 tracking-tight leading-tight">
+                Neurosymbolic Software
+                <br />
+                <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+                  Engineering Lab
+                </span>
+              </h1>
             </div>
+            <p className="text-lg md:text-xl text-gray-600 max-w-2xl leading-relaxed">
+              Combining neural learning with symbolic reasoning to build reliable,
+              verifiable software systems
+            </p>
           </div>
         </div>
       </section>
 
       {/* Research Highlights - Minimal Cards */}
-      <section className="py-20 px-6 bg-gradient-to-b from-blue-50/30 to-white">
+      <section className="py-20 px-6 bg-gradient-to-br from-blue-50/40 via-blue-50/20 to-white">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-3xl font-light text-gray-900 mb-12">Research</h2>
+          <h2 className="text-3xl font-light text-gray-900 mb-12">Research Areas</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {siteConfig.highlights.map((item, index) => (
-              <div key={index} className="space-y-3 group">
+              <div key={index} className="space-y-3 p-6 rounded-lg hover:bg-white/60 transition-all group">
                 <h3 className="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors">
                   {item.title}
                 </h3>
@@ -42,16 +46,17 @@ const Home = () => {
           <div className="mt-12">
             <Link
               to="/research"
-              className="text-blue-600 hover:text-blue-800 font-medium hover:underline inline-flex items-center"
+              className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center group"
             >
-              View all research areas →
+              View all research areas
+              <span className="ml-1 group-hover:translate-x-1 transition-transform">→</span>
             </Link>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 bg-white">
         <div className="container mx-auto max-w-5xl">
           <div className="grid md:grid-cols-2 gap-16">
             <div>
