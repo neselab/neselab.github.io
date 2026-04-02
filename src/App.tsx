@@ -19,7 +19,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/eierslab-ai-formal">
+      <BrowserRouter>
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
