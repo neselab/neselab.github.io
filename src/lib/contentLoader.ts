@@ -14,10 +14,13 @@ function parseFrontmatter(markdown: string): { data: Record<string, any>; conten
   const data: Record<string, any> = {};
   const lines = frontmatterStr.split('\n');
 
+  let currentNestedKey: string | null = null;
+
   for (const line of lines) {
     const colonIndex = line.indexOf(':');
     if (colonIndex === -1) continue;
 
+    const isNestedLine = /^\s+/.test(line);
     const key = line.slice(0, colonIndex).trim();
     let value: any = line.slice(colonIndex + 1).trim();
 
@@ -32,7 +35,15 @@ function parseFrontmatter(markdown: string): { data: Record<string, any>; conten
       value = Number(value);
     }
 
-    data[key] = value;
+    if (isNestedLine && currentNestedKey) {
+      data[currentNestedKey][key] = value;
+    } else if (value === '') {
+      data[key] = {};
+      currentNestedKey = key;
+    } else {
+      data[key] = value;
+      currentNestedKey = null;
+    }
   }
 
   return { data, content };
